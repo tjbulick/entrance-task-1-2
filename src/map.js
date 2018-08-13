@@ -11,9 +11,7 @@ export function initMap(ymaps, containerId) {
 
   const objectManager = new ymaps.ObjectManager({
     clusterize: true,
-    gridSize: 64,
     clusterIconLayout: 'default#pieChart',
-    clusterDisableClickZoom: false,
     geoObjectOpenBalloonOnClick: false,
     geoObjectHideIconOnBalloonOpen: false,
     geoObjectBalloonContentLayout: getDetailsContentLayout(ymaps)
@@ -24,6 +22,8 @@ export function initMap(ymaps, containerId) {
   loadList().then(data => {
     objectManager.add(data);
   });
+
+  myMap.geoObjects.add(objectManager);
 
   // details
   objectManager.objects.events.add('click', event => {
