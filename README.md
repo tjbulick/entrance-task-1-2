@@ -32,3 +32,8 @@
 ## Меняем диапазон Y-оси в `chart.js`
 График находился вне указанного диапазона
 [PR](https://github.com/tjbulick/entrance-task-1-2/pull/9)
+
+
+## Стиль кода / Codestyle
+
+Стиль кода был приведен к единому с помощью StandardJS.
